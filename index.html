@@ -309,6 +309,7 @@
             display: flex;
             gap: 15px;
             margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -394,16 +395,26 @@
             }
         }
 
-        /* Responsive */
+        /* ============================================
+           RESPONSIVE DESIGN - MEDIA QUERIES
+           ============================================ */
+
+        /* TABLET - 768px and below */
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
+                padding: 40px 30px;
+                gap: 30px;
+            }
+
+            .sidebar {
+                padding-right: 0;
             }
 
             .content-area {
                 border-left: none;
                 padding-left: 0;
-                padding-top: 40px;
+                padding-top: 30px;
                 border-top: 2px solid #e2e8f0;
             }
 
@@ -411,12 +422,422 @@
                 padding: 40px 30px;
             }
 
+            .header-content {
+                text-align: center;
+            }
+            
             .header h1 {
                 font-size: 2.5rem;
+                letter-spacing: 1px;
+            }
+
+            .header .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .header .tagline {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            
+            .contact-info {
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            .contact-item {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .timeline-title {
+                font-size: 1.15rem;
+            }
+
+            .timeline-item {
+                padding-left: 25px;
+                margin-left: 5px;
+            }
+
+            .project-links {
+                gap: 10px;
+            }
+
+            .project-link {
+                font-size: 0.85rem;
+                padding: 7px 14px;
+            }
+        }
+
+        /* MOBILE LARGE - 425px and below */
+        @media (max-width: 425px) {
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+
+            .header .tagline {
+                font-size: 0.95rem;
+            }
+
+            .contact-info {
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
             }
 
             .main-content {
-                padding: 40px 30px;
+                padding: 30px 20px;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .section {
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+                justify-content: center;
+            }
+
+            .skill-list {
+                justify-content: center;
+            }
+
+            .skill-tag {
+                font-size: 0.8rem;
+                padding: 5px 12px;
+            }
+
+            .language-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+                padding: 12px 0;
+            }
+
+            .interests {
+                align-items: center;
+            }
+
+            .interest-item {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .content-area {
+                text-align: left;
+            }
+
+            .profile-text {
+                font-size: 0.95rem;
+            }
+
+            .timeline-item {
+                padding-left: 20px;
+                margin-left: 0;
+            }
+
+            .timeline-date {
+                font-size: 0.85rem;
+            }
+
+            .timeline-title {
+                font-size: 1.05rem;
+            }
+
+            .timeline-company {
+                font-size: 0.9rem;
+            }
+
+            .timeline-tech {
+                justify-content: flex-start;
+                gap: 6px;
+            }
+
+            .tech-badge {
+                font-size: 0.75rem;
+                padding: 3px 10px;
+            }
+
+            .timeline-description {
+                font-size: 0.9rem;
+            }
+
+            .timeline-description ul {
+                padding-left: 15px;
+            }
+
+            .project-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .project-link {
+                width: 40%;
+                margin: auto;
+                justify-content: center;
+                font-size: 0.85rem;
+            }
+
+            .education-item {
+                padding: 15px;
+            }
+
+            .education-degree {
+                font-size: 1.05rem;
+            }
+
+            .education-school {
+                font-size: 0.9rem;
+            }
+
+            .education-date {
+                font-size: 0.85rem;
+            }
+
+            .education-item ul {
+                font-size: 0.85rem;
+                margin-left: 10px !important;
+            }
+
+            .footer {
+                padding: 25px 20px;
+            }
+
+            .footer p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* MOBILE MEDIUM - 375px and below */
+        @media (max-width: 375px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+
+            .header .subtitle {
+                font-size: 1rem;
+            }
+
+            .header .tagline {
+                font-size: 0.9rem;
+            }
+
+            .main-content {
+                padding: 25px 15px;
+            }
+
+            .section-title {
+                font-size: 1.05rem;
+            }
+
+            .skill-tag {
+                font-size: 0.75rem;
+                padding: 4px 10px;
+            }
+
+            .timeline-title {
+                font-size: 1rem;
+            }
+
+            .tech-badge {
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+
+            .timeline-description {
+                font-size: 0.85rem;
+            }
+
+            .project-link {
+                font-size: 0.8rem;
+                padding: 7px 12px;
+            }
+
+            .education-degree {
+                font-size: 1rem;
+            }
+
+            .education-school,
+            .education-date {
+                font-size: 0.85rem;
+            }
+
+            .education-item ul {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* MOBILE SMALL - 320px and below */
+        @media (max-width: 320px) {
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+                letter-spacing: 0.5px;
+            }
+
+            .header .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .header .tagline {
+                font-size: 0.85rem;
+                line-height: 1.6;
+            }
+
+            .contact-item {
+                font-size: 0.8rem;
+            }
+
+            .contact-item i {
+                font-size: 1rem;
+            }
+
+            .main-content {
+                padding: 20px 12px;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 1rem;
+                gap: 8px;
+            }
+
+            .section-title i {
+                font-size: 1rem;
+            }
+
+            .skill-category h4 {
+                font-size: 0.85rem;
+            }
+
+            .skill-tag {
+                font-size: 0.7rem;
+                padding: 4px 8px;
+            }
+
+            .language-item {
+                font-size: 0.85rem;
+            }
+
+            .interest-item {
+                font-size: 0.85rem;
+                padding: 8px;
+            }
+
+            .interest-item i {
+                font-size: 1rem;
+            }
+
+            .profile-text {
+                font-size: 0.85rem;
+            }
+
+            .timeline-item {
+                padding-left: 18px;
+                padding-bottom: 30px;
+            }
+
+            .timeline-item::before {
+                width: 10px;
+                height: 10px;
+                left: -6px;
+            }
+
+            .timeline-date {
+                font-size: 0.8rem;
+            }
+
+            .timeline-title {
+                font-size: 0.95rem;
+            }
+
+            .timeline-company {
+                font-size: 0.85rem;
+            }
+
+            .tech-badge {
+                font-size: 0.65rem;
+                padding: 2px 7px;
+            }
+
+            .timeline-description {
+                font-size: 0.8rem;
+                line-height: 1.6;
+            }
+
+            .timeline-description ul {
+                padding-left: 12px;
+            }
+
+            .timeline-description li {
+                margin: 6px 0;
+            }
+
+            .project-link {
+                width: 50%;
+                font-size: 0.75rem;
+                padding: 6px 10px;
+            }
+
+            .project-link i {
+                font-size: 0.85rem;
+            }
+
+            .education-item {
+                padding: 12px;
+            }
+
+            .education-degree {
+                font-size: 0.95rem;
+            }
+
+            .education-school {
+                font-size: 0.8rem;
+            }
+
+            .education-date {
+                font-size: 0.8rem;
+            }
+
+            .education-item ul {
+                font-size: 0.75rem;
+                margin-left: 8px !important;
+            }
+
+            .footer {
+                padding: 20px 15px;
+            }
+
+            .footer p {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -434,7 +855,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <a href="mailto:matfen2.0@outlook.fr" class="contact-item">
+                    <a href="mailto:mathieufenouil@gmail.com" class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <span>matfen2.0@outlook.fr</span>
                     </a>
@@ -597,7 +1018,7 @@
                     </h2>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">Novembre 2024</div>
+                        <div class="timeline-date">Novembre 2025</div>
                         <h3 class="timeline-title">Argent Bank - Application Bancaire Full-Stack</h3>
                         <div class="timeline-company">Projet professionnel | Déployé en production</div>
                         
@@ -798,14 +1219,9 @@
         document.querySelectorAll('.timeline-item, .section').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
-
-        // Print button
-        function printCV() {
-            window.print();
-        }
     </script>
 </body>
 </html>
