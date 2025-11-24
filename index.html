@@ -855,7 +855,7 @@
                 </p>
                 
                 <div class="contact-info">
-                    <a href="mailto:matfen2.0@outlook.fr" class="contact-item">
+                    <a href="mailto:mathieu.fenouil@example.com" class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <span>matfen2.0@outlook.fr</span>
                     </a>
@@ -1023,6 +1023,49 @@
                         <i class="fas fa-rocket"></i>
                         Projets Développés
                     </h2>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Novembre 2025</div>
+                        <h3 class="timeline-title">Food Chief - Application de Gestion de Recettes</h3>
+                        <div class="timeline-company">Projet personnel | Déployé en production</div>
+                        
+                        <div class="timeline-tech">
+                            <span class="tech-badge">React 19</span>
+                            <span class="tech-badge">Vite</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                            <span class="tech-badge">Framer Motion</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">JWT</span>
+                            <span class="tech-badge">Vercel</span>
+                            <span class="tech-badge">Render</span>
+                        </div>
+
+                        <div class="timeline-description">
+                            <p>Application web moderne de gestion et partage de recettes avec interface utilisateur immersive et fonctionnalités avancées.</p>
+                            <ul>
+                                <li>Développement full-stack avec React 19, Node.js/Express et MongoDB Atlas</li>
+                                <li>Design moderne avec effets glassmorphism et animations fluides (Framer Motion)</li>
+                                <li>Système d'authentification sécurisé avec JWT et hashage bcrypt</li>
+                                <li>Fonctionnalités avancées : favoris, ajustement des portions, checklist interactive</li>
+                                <li>Architecture API REST centralisée avec service Axios</li>
+                                <li>Interface 100% responsive (mobile, tablet, desktop)</li>
+                                <li>Déploiement CI/CD : Frontend Vercel, Backend Render</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://food-chief.vercel.app" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Voir la démo
+                            </a>
+                            <a href="https://github.com/Matfen2/food-chief" target="_blank" class="project-link secondary">
+                                <i class="fab fa-github"></i>
+                                Voir le code
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="timeline-item">
                         <div class="timeline-date">Novembre 2025</div>
@@ -1210,11 +1253,11 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.timeline-item, .section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
+        document.querySelectorAll('.timeline-item, .section').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
         });
     </script>
 </body>
